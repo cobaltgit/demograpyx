@@ -24,8 +24,8 @@ async def main() -> None:
     # genderize = Genderize(session=aiohttp.ClientSession())
 
     data = await genderize.predict("Mike", country_id=CountryCode.UnitedStates)
-    print(f"{data.gender} - {data.probability}")
-    # "male - 1.0"
+    print(data)
+    # GenderPrediction(count=675221, name='Mike', gender='male', probability=1.0, country_id='US')
 
 if __name__ == "__main__":
     asyncio.run(main())
