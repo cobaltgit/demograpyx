@@ -2,6 +2,14 @@
 
 A set of asynchronous bindings for the three Demograpix APIs: [`genderize`](https://genderize.io/), [`agify`](https://agify.io) and [`nationalize`](https://nationalize.io)
 
+## Installation
+
+Requires Python 3.10 or newer
+
+```sh
+$ pip install demograpyx
+```
+
 ## Example usage
 
 Functions are identical across all three API clients (`predict`, `batch_predict`)

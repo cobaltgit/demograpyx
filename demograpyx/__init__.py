@@ -1,3 +1,8 @@
+from sys import version_info
+
+if version_info < (3, 10, 0):
+    raise RuntimeError("demograpyx requires Python 3.10 or newer to work.")
+
 from typing import NamedTuple
 
 from .clients import Genderize, Agify, Nationalize
@@ -12,4 +17,4 @@ class VersionInfo(NamedTuple):
 
 __version__ = VersionInfo(major=1, minor=0, micro=0)
 
-del NamedTuple
+del NamedTuple, version_info
