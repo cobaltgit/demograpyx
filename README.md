@@ -23,7 +23,7 @@ async def main() -> None:
     # alternatively, initialise an aiohttp.ClientSession and pass it as a kwarg
     # genderize = Genderize(session=aiohttp.ClientSession())
 
-    data = await genderize.predict("Mike", country_id=CountryCode.UnitedStates)
+    data = await genderize.predict("Mike", country_id=CountryCode.UnitedStates) # country_id argument is optional, will improve prediction accuracy
     print(data)
     # GenderPrediction(count=675221, name='Mike', gender='male', probability=1.0, country_id='US')
 
